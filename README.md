@@ -21,18 +21,23 @@ Following is the hyperparameters chosen for this: <br>
 <LI>epochs = 20<br>
 <LI>alpha = 0.025<br>
  </UL>
-<br>
 Initially, when vectorizing corpuses with Doc2Vec, labels(author, sex, literally period) were assigned to each of the corpuses. This means, each labels were also vectorized. So cosine similarity could be used to find the most similar label vectors to each corpus: <br>
 <b> Top 10 most similar vectors to the sample corpus by Nathaniel Hawthorne (male, gothic/romantic): </b><br>
-{'female': 0.6568350791931152,<br>
- 'gothic/romantic': 0.4545186161994934,<br>
- 'male': 0.43780285120010376,<br>
- 'NathanielHawthorne': 0.4020436406135559,<br>
- 'JaneAustin': 0.35304591059684753,<br>
- 'JohnLocke': 0.3185476064682007,<br>
- 'enlightenment': 0.3154699206352234,<br>
- 'EdithWharton': 0.28648972511291504,<br>
- 'victorian': 0.22939543426036835,<br>
- 'naturalism': 0.20019471645355225}<br>
-Then PCA was used to reduce the dimensionality from 20 to 3 to visualize the corpus and label vectors.Explained variance ratio is <b>41.47%</b>, <b>58.53%</b> is lost by reducing the dimensionality.
+<UL>
+<LI>female: 0.6568350791931152,<br>
+<LI>gothic/romantic: 0.4545186161994934,<br>
+<LI>male: 0.43780285120010376,<br>
+<LI>NathanielHawthorne: 0.4020436406135559,<br>
+<LI>JaneAustin: 0.35304591059684753,<br>
+<LI>JohnLocke: 0.3185476064682007,<br>
+<LI>enlightenment: 0.3154699206352234,<br>
+<LI>EdithWharton: 0.28648972511291504,<br>
+<LI>victorian: 0.22939543426036835,<br>
+<LI>naturalism: 0.20019471645355225}<br>
+ 
+Then PCA was used to reduce the dimensionality from 20 to 3 to visualize the corpus and label vectors.<br>
+Explained variance ratio is <b>41.47%</b>, <b>58.53%</b> is lost by reducing the dimensionality.
  <img src="project4_authorship_detection_3d_1.gif">
+<br>
+It appears on the above 3D plot that corpus vectors are quite distinct for each author, gender and literally period. However, it was suspected that using authors, genders, and literally period as corpus labels caused this bias to happen (= ). Hence, instead of those labels, unique IDs (integers from 0 to number of corpuses) were used as labels so that each corpus will be vectorized in a
+ <img src="project4_authorship_detection_3d_2.gif">
