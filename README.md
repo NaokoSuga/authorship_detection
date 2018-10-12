@@ -46,9 +46,20 @@ Intererstingly, corpus vectors seem to be pretty distinct for each gender. Also 
 Once the corpus has been vectorized, multiple deep learning and shallow learning methods were used to detect the authors, genders, and literally periods of each corpus.
 <h2>Multilayer Perceptron (MLP)</h2>
 As there weren't enough rows for multi-class classification, MLP was used only for gender classification (binary classification).
+<h4>MLP Architecture</h4>
+<img src="updated.png" width = '700' height = '500'>
+<h4>2 Layer Multilayer Perceptron</h4>
  <img src="project4_authorship_detection_mlp.png" width = '500' height = '200'>
 <h4>Early Stopping</h4>
  <img src="project4_authorship_detection_3d_1_mlp_early_stopping.png" width = '500' height = '200'>
 <h4>L1, L2, Dropout</h4>
  <img src="project4_authorship_detection_dropout.png" width = '500' height = '200'>
+ <h2>Shallow Learning Models</h2>
+ We also ran a series of shallow learning models for comparison, particularly given that we had a smaller dataset (we didn't have 1000 instances of author or period classes). We ran Naive Bayes, Random Forest, AdaBoost, and K-Neighbors. We tried bag of words vectorization with unigrams and bigrams and Tfidf vectorization with unigrams and bigrams.<br><br>
+
+Our highest score for author's sex was actually a Bernoulli Naive Bayes using bag of words with bigram, which accurately predicted author's sex on the test with 90.4% accuracy.<br><br>
+
+For a work's literary period, our best model on cross-validation was . Random guess chance - 14% <br><br>
+
+And for predicting on individual author, our best model on cross-validation was: Random guess chance - 7%<br>
 <h2> Conclusion </h2>
