@@ -45,3 +45,8 @@ After vectorizing the corpuses in this way, again PCA was carried out to reduce 
 Intererstingly, corpus vectors seem to be pretty distinct for each gender. Also John Locke's writing appears to be especially unique from others. <br>
 Once the corpus has been vectorized, multiple deep learning and shallow learning methods were used to detect the authors, genders, and literally periods of each corpus.
 <h2>Multilayer Perceptron (MLP)</h2>
+ <img src="project4_authorship_detection_mlp.png" width = '500' height = '200'>
+<h4>Early Stopping</h4>
+ <img src="project4_authorship_detection_3d_1_mlp_early_stopping.png" width = '500' height = '200'>
+<h4>L1, L2, Dropout</h4>
+ <img src="project4_authorship_detection_dropout.png" width = '500' height = '200'>
