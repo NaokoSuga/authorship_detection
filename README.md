@@ -1,5 +1,5 @@
 # Authorship Detection
-Detect the author, author gender, and literary period of a corpus using deep learning and machine learning techniques
+Detect the author, author gender, and literary period of a corpus using deep learning and shallow learning techniques.
 Data Source: http://www.gutenberg.org/
 #### 14 American and British authors (7 male, 7 female), 2 books each, from 7 different literary periods
 <img src="project4_authorship_detection_df.png">
@@ -57,9 +57,11 @@ As there weren't enough rows for multi-class classification, MLP was used only f
  <h2>Shallow Learning Models</h2>
  We also ran a series of shallow learning models for comparison, particularly given that we had a smaller dataset (we didn't have 1000 instances of author or period classes). We ran Naive Bayes, Random Forest, AdaBoost, and K-Neighbors. We tried bag of words vectorization with unigrams and bigrams and Tfidf vectorization with unigrams and bigrams.<br><br>
 
-Our highest score for author's sex was actually a Bernoulli Naive Bayes using bag of words with bigram, which accurately predicted author's sex on the test with 90.4% accuracy.<br><br>
+Our highest score for author's sex was actually a Bernoulli Naive Bayes using bag of words with bigram, which accurately predicted author's sex on the test with 90.4% accuracy.<br>
 
-For a work's literary period, our best model on cross-validation was . Random guess chance - 14% <br><br>
+For a work's literary period, our best model on cross-validation was . Random guess chance - 14% <br>
 
 And for predicting on individual author, our best model on cross-validation was: Random guess chance - 7%<br>
+<img src="project4_authorship_detection_shallow_learning_comp.png">
 <h2> Conclusion </h2>
+Overall, shallow learning models performed better than deep learning model.
