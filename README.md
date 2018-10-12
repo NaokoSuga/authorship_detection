@@ -42,7 +42,7 @@ Explained variance ratio is <b>41.47%</b>, <b>58.53%</b> is lost by reducing the
 It appears on the above 3D plot that corpus vectors are quite distinct for each author, gender and literally period. However, it was suspected that using authors, genders, and literally periods as corpus labels caused certain data leakage/bias to occur. Hence, instead of those labels, unique IDs (integers from 0 to number of corpuses) were used as labels for the rest of the part so that each corpus will be vectorized in a way that it doesn't know its labels.<br>
 After vectorizing the corpuses in this way, again PCA was carried out to reduce the dimensionality from 20 to 3. This time explained variance ratio is <b>36.81%</b>, <b>63.19%</b> is lost by reducing the dimensionality.<br>
  <img src="project4_authorship_detection_3d_2.gif">
-Intererstingly, corpus vectors seem to be pretty distinct for each gender. Also John Locke's writing appears to be especially unique from others. <br>
+Interestingly, corpus vectors seem to be pretty distinct for each gender. Also John Locke's writing appears to be especially unique from others. <br>
 Once the corpus has been vectorized, multiple deep learning and shallow learning methods were used to detect the authors, genders, and literally periods of each corpus.
 <h2>Multilayer Perceptron (MLP)</h2>
 As there weren't enough rows for multi-class classification, MLP was used only for gender classification (binary classification).
