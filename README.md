@@ -14,7 +14,7 @@ Data Source: http://www.gutenberg.org/
  </UL>
 <h2>Doc2Vec</h2>
 For this project, gensim's <a href="https://radimrehurek.com/gensim/models/doc2vec.html">Doc2Vec</a> was used to vectorize the corpuses.<br>
-Following is the hyperparameters chosen for this model: <br>
+Following are the hyperparameters chosen for this model: <br>
 <UL>
 <LI>vec_size = 20<br>
 <LI>min_count = 2<br>
